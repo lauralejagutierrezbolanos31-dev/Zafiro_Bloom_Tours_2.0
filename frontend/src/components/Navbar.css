@@ -163,3 +163,7 @@
 a.navbar-enlace {
     text-decoration: none;
 }
+
+.navbar-boton-inicio {
+    background: rgba(255, 255, 255, 0.08);
+}

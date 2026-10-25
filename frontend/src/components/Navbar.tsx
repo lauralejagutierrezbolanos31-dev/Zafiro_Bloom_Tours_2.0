@@ -32,9 +32,12 @@ function Navbar() {
             <span className="navbar-titulo">Zafiro Bloom Tours</span>
           </Link>
 
+          {!enInicio && (
+            <Link to="/" className="navbar-boton navbar-boton-inicio">🏠 Inicio</Link>
+          )}
+
           {enInicio && (
             <div className="navbar-botones">
-              <Link to="/" className="navbar-boton navbar-boton-inicio">🏠 Inicio</Link>
               <button className="navbar-boton navbar-boton-ferias" onClick={() => setModal("feria")}>
                 📅 Ferias y Fiestas del Mes
               </button>

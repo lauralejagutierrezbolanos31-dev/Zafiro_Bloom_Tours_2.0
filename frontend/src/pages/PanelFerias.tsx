@@ -9,6 +9,7 @@ import type { FeriaAdmin } from "../types/feria";
 import { mensajeError } from "../utils/errores";
 import { fechaCorta } from "../utils/formato";
 import "./PanelFerias.css";
+import EncabezadoPagina from "../components/EncabezadoPagina";
 
 const VACIO = {
   nombre: "",
@@ -136,7 +137,7 @@ function PanelFerias() {
 
   return (
     <div className="panel-ferias">
-      <h1>Ferias y ofertas</h1>
+      <EncabezadoPagina titulo="Ferias y ofertas" subtitulo="Crea, edita y quita ferias y ofertas." />
 
       <form className="panel-ferias-form" onSubmit={guardar}>
         <h2>{editando ? "Editar" : "Nueva feria u oferta"}</h2>

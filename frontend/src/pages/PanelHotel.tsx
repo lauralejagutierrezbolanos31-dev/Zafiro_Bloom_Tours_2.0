@@ -5,6 +5,7 @@ import type { HabitacionForm, HabitacionPanel, HotelPanel, ReservaHotel } from "
 import { mensajeError } from "../utils/errores";
 import { fechaCorta, moneda } from "../utils/formato";
 import "./PanelHotel.css";
+import EncabezadoPagina from "../components/EncabezadoPagina";
 
 const FORM_VACIO: HabitacionForm = {
   nombre: "", tipo_cama: "", capacidad: 2, precio: 100000, foto_referencia: "",
@@ -96,7 +97,7 @@ function PanelHotel() {
 
   return (
     <div className="panel-hotel">
-      <h1>Panel del hotel</h1>
+      <EncabezadoPagina titulo="Panel del hotel" subtitulo="Gestiona tus habitaciones y revisa tus reservas." />
 
       {hoteles.length > 1 && (
         <select

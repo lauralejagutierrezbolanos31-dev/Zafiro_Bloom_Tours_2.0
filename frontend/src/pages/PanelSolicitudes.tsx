@@ -6,6 +6,7 @@ import type { Destino } from "../types/destino";
 import type { Solicitud } from "../types/panel";
 import { mensajeError } from "../utils/errores";
 import "./PanelSolicitudes.css";
+import EncabezadoPagina from "../components/EncabezadoPagina";
 
 function PanelSolicitudes() {
   const [solicitudes, setSolicitudes] = useState<Solicitud[]>([]);
@@ -49,7 +50,7 @@ function PanelSolicitudes() {
 
   return (
     <div className="panel-sol">
-      <h1>Solicitudes de administradores</h1>
+      <EncabezadoPagina titulo="Solicitudes de administradores" subtitulo="Aprueba o rechaza a los nuevos hoteleros." />
 
       <div className="panel-sol-filtros">
         {(["pendiente", "aprobada", "rechazada"] as const).map((f) => (

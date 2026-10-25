@@ -1,0 +1,38 @@
+.enc-pagina {
+    margin-bottom: 1.5rem;
+}
+
+.enc-pagina-nav {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 0.9rem;
+}
+
+.enc-pagina-nav button,
+.enc-pagina-nav a {
+    padding: 0.4rem 1rem;
+    background: white;
+    border: 1px solid var(--azul-medio);
+    border-radius: 999px;
+    color: var(--azul-medio);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.enc-pagina-nav button:hover,
+.enc-pagina-nav a:hover {
+    background: var(--azul-medio);
+    color: white;
+}
+
+.enc-pagina h1 {
+    color: var(--azul-oscuro);
+}
+
+.enc-pagina p {
+    margin-top: 0.3rem;
+    color: #555;
+}
