@@ -1,0 +1,17 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Secretos
+.env
+*.env
+!.env.example
+
+# Node
+node_modules/
+dist/
+
+# Sistema y editor
+.DS_Store
+.vscode/
