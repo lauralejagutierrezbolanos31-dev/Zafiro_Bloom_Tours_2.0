@@ -11,6 +11,9 @@ import HazParte from "./pages/HazParte";
 import Home from "./pages/Home";
 import MisViajes from "./pages/MisViajes";
 import SolicitarAcceso from "./pages/SolicitarAcceso";
+import RutaProtegida from "./components/RutaProtegida";
+import PanelHotel from "./pages/PanelHotel";
+import PanelSolicitudes from "./pages/PanelSolicitudes";
 
 function App() {
   return (
@@ -26,6 +29,8 @@ function App() {
           <Route path="/cuenta" element={<Cuenta />} />
           <Route path="/haz-parte" element={<HazParte />} />
           <Route path="/solicitar-acceso" element={<SolicitarAcceso />} />
+          <Route path="/panel/solicitudes" element={<RutaProtegida roles={["super_admin"]}><PanelSolicitudes /></RutaProtegida>} />
+          <Route path="/panel/hotel" element={<RutaProtegida roles={["admin_hotel", "super_admin"]}><PanelHotel /></RutaProtegida>} />
         </Routes>
       </main>
       <Footer />

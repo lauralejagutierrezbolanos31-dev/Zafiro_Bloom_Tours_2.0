@@ -7,7 +7,8 @@ from app.core.config import settings
 from app.core.database import get_db
 from app.routers import (
     deptos, destinos, gastronomia, actividades, transporte,
-    ferias, hoteles, habitaciones, buscar, usuarios, viajes, solicitudes,
+    ferias, hoteles, habitaciones, buscar, usuarios, viajes,
+    solicitudes, admin_solicitudes, panel_hotel,
 )
 app = FastAPI(title="Zafiro Bloom Tours API", version="2.0.0")
 
@@ -31,6 +32,8 @@ app.include_router(buscar.router)
 app.include_router(usuarios.router)
 app.include_router(viajes.router)
 app.include_router(solicitudes.router)
+app.include_router(admin_solicitudes.router)
+app.include_router(panel_hotel.router)
 
 
 @app.get("/", tags=["Estado"])

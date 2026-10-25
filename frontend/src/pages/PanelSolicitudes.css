@@ -1,0 +1,100 @@
+.panel-sol {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.panel-sol h1 {
+    margin-bottom: 1rem;
+    color: var(--azul-oscuro);
+}
+
+.panel-sol-filtros {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.panel-sol-filtros button {
+    padding: 0.45rem 1.1rem;
+    background: white;
+    border: 1px solid var(--azul-medio);
+    border-radius: 999px;
+    color: var(--azul-medio);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.panel-sol-filtros .filtro-activo {
+    background: var(--azul-medio);
+    color: white;
+}
+
+.panel-sol-ok {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background: #dff0d8;
+    border-radius: 8px;
+    color: var(--verde);
+    text-align: center;
+}
+
+.panel-sol-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.panel-sol-item {
+    padding: 1.3rem 1.5rem;
+    background: white;
+    border-left: 5px solid var(--amarillo);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.panel-sol-item h2 {
+    color: var(--azul-medio);
+}
+
+.panel-sol-item p {
+    margin-top: 0.35rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.panel-sol-cat {
+    color: #777;
+    font-size: 0.82rem !important;
+}
+
+.panel-sol-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 1rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid #eee;
+}
+
+.panel-sol-acciones select {
+    padding: 0.5rem 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.panel-sol-rechazar {
+    padding: 0.55rem 1.2rem;
+    background: white;
+    border: 1px solid var(--rojo);
+    border-radius: 6px;
+    color: var(--rojo);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.panel-sol-rechazar:hover {
+    background: var(--rojo);
+    color: white;
+}

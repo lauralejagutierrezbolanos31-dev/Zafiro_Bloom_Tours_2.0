@@ -51,6 +51,12 @@ function Navbar() {
             {usuario ? (
   <>
     <span className="navbar-saludo">Hola, {usuario.nombre}</span>
+    {usuario.rol === "super_admin" && (
+  <Link to="/panel/solicitudes" className="navbar-enlace">Solicitudes</Link>
+)}
+{(usuario.rol === "admin_hotel" || usuario.rol === "super_admin") && (
+  <Link to="/panel/hotel" className="navbar-enlace">Mi hotel</Link>
+)}
     <Link to="/mis-viajes" className="navbar-enlace">Mis viajes</Link>
     <Link to="/cuenta" className="navbar-enlace">Mi cuenta</Link>
     <button
