@@ -6,3 +6,4 @@ from app.models.transporte import Transporte
 from app.models.feria import Feria
 from app.models.hotel import Hotel
 from app.models.habitacion import Habitacion
+from app.models.usuario import Usuario
