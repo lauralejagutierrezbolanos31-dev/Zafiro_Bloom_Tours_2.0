@@ -76,10 +76,10 @@ function CrearViaje() {
         <ModalHabitaciones
           hotel={hotelElegido}
           onCerrar={() => setHotelElegido(null)}
-          onReservado={() => {
+          onReservado={(viaje) => {
             setHotelElegido(null);
             cargarHoteles();
-            navigate("/mis-viajes");
+            navigate("/viaje-exitoso", { state: { viaje } });
           }}
         />
       )}

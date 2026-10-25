@@ -1,0 +1,104 @@
+.exito {
+    max-width: 620px;
+    margin: 2.5rem auto;
+    padding: 2.5rem 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.exito-icono {
+    font-size: 3.5rem;
+}
+
+.exito h1 {
+    margin: 0.4rem 0;
+    color: var(--azul-oscuro);
+}
+
+.exito-lema {
+    margin-bottom: 1.6rem;
+    color: var(--dorado);
+    font-style: italic;
+    font-weight: 600;
+}
+
+.exito-resumen {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1.6rem;
+    padding: 1.3rem 1.5rem;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    text-align: left;
+}
+
+.exito-resumen h2 {
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb;
+    color: var(--azul-medio);
+    font-size: 1.15rem;
+}
+
+.exito-resumen h3 {
+    margin-top: 0.6rem;
+    color: var(--azul-medio);
+    font-size: 1rem;
+}
+
+.exito-fila,
+.exito-habitaciones li,
+.exito-total {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.93rem;
+}
+
+.exito-fila strong {
+    color: var(--azul-oscuro);
+}
+
+.exito-habitaciones {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    list-style: none;
+}
+
+.exito-total {
+    margin-top: 0.6rem;
+    padding-top: 0.8rem;
+    border-top: 2px solid #e5e7eb;
+    font-size: 1.15rem;
+}
+
+.exito-total strong {
+    color: var(--azul-medio);
+}
+
+.exito-botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.exito-boton {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+}
+
+.exito-secundario {
+    color: var(--azul-medio);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.exito-secundario:hover {
+    text-decoration: underline;
+}
