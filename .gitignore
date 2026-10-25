@@ -15,3 +15,8 @@ dist/
 # Sistema y editor
 .DS_Store
 .vscode/
+
+database/copia_neon.sql
+database/copia_local.sql
+database/respaldo.sql
+database/.neon_url

@@ -25,6 +25,17 @@ def _ocupadas(db: Session, ini, fin) -> set[int]:
     return {f[0] for f in filas}
 
 
+def finalizar_vencidos(db: Session) -> None:
+    """Marca como finalizados los viajes cuya fecha de salida ya pasó.
+    El trigger trg_sync_habitaciones libera sus habitaciones."""
+    db.execute(text("""
+        UPDATE viaje_personalizado
+        SET estado = 'finalizado'
+        WHERE estado = 'reservado' AND fecha_final < CURRENT_DATE
+    """))
+    db.commit()
+
+
 def _a_salida(viaje: Viaje) -> ViajeOut:
     return ViajeOut(
         id_vp=viaje.id_vp,
@@ -119,6 +130,7 @@ def crear_viaje(db: Session, usuario: Usuario, datos: ViajeCrear) -> ViajeOut:
 
 
 def mis_viajes(db: Session, usuario: Usuario) -> list[ViajeOut]:
+    finalizar_vencidos(db)
     viajes = db.scalars(
         select(Viaje).where(Viaje.id_usuario == usuario.id_usuario)
         .order_by(Viaje.fecha_inicial.desc())

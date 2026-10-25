@@ -31,10 +31,7 @@ function Navbar() {
             <img src={logo} alt="Zafiro Bloom Tours" className="navbar-logo" />
             <span className="navbar-titulo">Zafiro Bloom Tours</span>
           </Link>
-
-          {!enInicio && (
-            <Link to="/" className="navbar-boton navbar-boton-inicio">🏠 Inicio</Link>
-          )}
+          
 
           {enInicio && (
             <div className="navbar-botones">

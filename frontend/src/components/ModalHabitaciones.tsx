@@ -22,7 +22,7 @@ function ModalHabitaciones({ hotel, onCerrar, onReservado }: Props) {
 
   const [inicio, setInicio] = useState("");
   const [fin, setFin] = useState("");
-  const [personas, setPersonas] = useState(2);
+  const [personas, setPersonas] = useState(1);
   const [habitaciones, setHabitaciones] = useState<Habitacion[]>([]);
   const [seleccion, setSeleccion] = useState<Record<number, number>>({});
   const [cargando, setCargando] = useState(true);
