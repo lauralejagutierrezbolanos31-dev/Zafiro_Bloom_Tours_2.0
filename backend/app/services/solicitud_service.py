@@ -23,7 +23,9 @@ def _pendiente(db: Session, id_solicitud: int) -> SolicitudAdmin:
     return solicitud
 
 
-def aprobar(db: Session, id_solicitud: int, id_destino: int | None) -> SolicitudAdmin:
+def aprobar(
+    db: Session, id_solicitud: int, id_destino: int | None, admin: Usuario
+) -> SolicitudAdmin:
     solicitud = _pendiente(db, id_solicitud)
 
     destino = id_destino or solicitud.id_destino
@@ -48,6 +50,7 @@ def aprobar(db: Session, id_solicitud: int, id_destino: int | None) -> Solicitud
     db.add(HotelTabla(
         id_destino=destino,
         id_propietario=usuario.id_usuario,
+        id_solicitud=solicitud.id_solicitud,
         nombre=solicitud.nombre_hotel,
         direccion=solicitud.direccion_hotel,
         descripcion=solicitud.descripcion,
@@ -59,15 +62,20 @@ def aprobar(db: Session, id_solicitud: int, id_destino: int | None) -> Solicitud
     solicitud.estado = "aprobada"
     solicitud.id_destino = destino
     solicitud.fecha_resolucion = datetime.now()
+    solicitud.resuelta_por = admin.id_usuario
     db.commit()
     db.refresh(solicitud)
     return solicitud
 
 
-def rechazar(db: Session, id_solicitud: int) -> SolicitudAdmin:
+def rechazar(
+    db: Session, id_solicitud: int, admin: Usuario, motivo: str | None
+) -> SolicitudAdmin:
     solicitud = _pendiente(db, id_solicitud)
     solicitud.estado = "rechazada"
     solicitud.fecha_resolucion = datetime.now()
+    solicitud.resuelta_por = admin.id_usuario
+    solicitud.motivo_rechazo = motivo
     db.commit()
     db.refresh(solicitud)
     return solicitud

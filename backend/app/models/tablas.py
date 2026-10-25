@@ -18,6 +18,7 @@ class HotelTabla(Base):
     contacto: Mapped[str | None] = mapped_column(String(50))
     categoria: Mapped[str | None] = mapped_column(String(50))
     politicas: Mapped[str | None] = mapped_column(Text)
+    id_solicitud: Mapped[int | None] = mapped_column(ForeignKey("solicitud_admin.id_solicitud"))
     activo: Mapped[bool] = mapped_column(Boolean, default=True)
 
 

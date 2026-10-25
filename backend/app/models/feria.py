@@ -1,6 +1,6 @@
 from datetime import date
 from decimal import Decimal
-from sqlalchemy import ForeignKey, String, Text, Numeric, Boolean, Date
+from sqlalchemy import Boolean, Date, Enum, ForeignKey, Numeric, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.core.database import Base
@@ -13,7 +13,9 @@ class Feria(Base):
     id_depto: Mapped[int | None] = mapped_column(ForeignKey("deptos.id_depto"))
     id_destino: Mapped[int | None] = mapped_column(ForeignKey("destinos.id_destino"))
     nombre: Mapped[str] = mapped_column(String(150))
-    tipo: Mapped[str] = mapped_column(String(10))  # 'feria' | 'oferta'
+    tipo: Mapped[str] = mapped_column(
+        Enum("feria", "oferta", name="tipo_feria", create_type=False)
+    )  # 'feria' | 'oferta'
     descripcion: Mapped[str | None] = mapped_column(Text)
     foto_referencia: Mapped[str | None] = mapped_column(String(255))
     fecha_inicio: Mapped[date | None] = mapped_column(Date)

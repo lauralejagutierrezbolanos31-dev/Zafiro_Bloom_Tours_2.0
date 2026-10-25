@@ -29,3 +29,5 @@ class SolicitudAdmin(Base):
     )
     fecha_registro: Mapped[datetime] = mapped_column(DateTime, server_default=func.now())
     fecha_resolucion: Mapped[datetime | None] = mapped_column(DateTime)
+    resuelta_por: Mapped[int | None] = mapped_column(ForeignKey("usuario.id_usuario"))
+    motivo_rechazo: Mapped[str | None] = mapped_column(Text)

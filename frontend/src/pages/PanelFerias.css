@@ -1,0 +1,151 @@
+.panel-ferias {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.panel-ferias h1 {
+    margin-bottom: 1rem;
+    color: var(--azul-oscuro);
+}
+
+.panel-ferias-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+    padding: 1.3rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.panel-ferias-form h2 {
+    color: var(--azul-medio);
+    font-size: 1.1rem;
+}
+
+.pf-fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+
+.panel-ferias-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    color: var(--azul-oscuro);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.panel-ferias-form input,
+.panel-ferias-form select,
+.panel-ferias-form textarea {
+    padding: 0.55rem 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+.panel-ferias-form .pf-check {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pf-botones {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.pf-cancelar {
+    padding: 0.6rem 1.2rem;
+    background: #eee;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.pf-ok {
+    margin-bottom: 1rem;
+    padding: 0.7rem;
+    background: #dff0d8;
+    border-radius: 8px;
+    color: var(--verde);
+    text-align: center;
+}
+
+.pf-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.pf-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem 1.2rem;
+    background: white;
+    border-left: 4px solid var(--azul-medio);
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.07);
+}
+
+.pf-oferta {
+    border-left-color: var(--amarillo);
+}
+
+.pf-inactiva {
+    opacity: 0.55;
+}
+
+.pf-item small {
+    display: block;
+    margin-top: 0.25rem;
+    color: #666;
+}
+
+.pf-etiqueta {
+    margin-left: 0.6rem;
+    padding: 0.15rem 0.6rem;
+    background: var(--amarillo);
+    border-radius: 999px;
+    color: var(--azul-oscuro);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.pf-oculta {
+    background: #ddd;
+    color: #555;
+}
+
+.pf-acciones {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.pf-acciones button {
+    padding: 0.4rem 0.9rem;
+    background: white;
+    border: 1px solid var(--azul-medio);
+    border-radius: 6px;
+    color: var(--azul-medio);
+    cursor: pointer;
+}
+
+.pf-acciones .peligro {
+    border-color: var(--rojo);
+    color: var(--rojo);
+}
+
+@media (max-width: 560px) {
+    .pf-fila {
+        grid-template-columns: 1fr;
+    }
+}

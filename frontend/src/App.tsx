@@ -14,6 +14,7 @@ import SolicitarAcceso from "./pages/SolicitarAcceso";
 import RutaProtegida from "./components/RutaProtegida";
 import PanelHotel from "./pages/PanelHotel";
 import PanelSolicitudes from "./pages/PanelSolicitudes";
+import PanelFerias from "./pages/PanelFerias";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/solicitar-acceso" element={<SolicitarAcceso />} />
           <Route path="/panel/solicitudes" element={<RutaProtegida roles={["super_admin"]}><PanelSolicitudes /></RutaProtegida>} />
           <Route path="/panel/hotel" element={<RutaProtegida roles={["admin_hotel", "super_admin"]}><PanelHotel /></RutaProtegida>} />
+          <Route path="/panel/ferias" element={<RutaProtegida roles={["super_admin"]}><PanelFerias /></RutaProtegida>} />
         </Routes>
       </main>
       <Footer />

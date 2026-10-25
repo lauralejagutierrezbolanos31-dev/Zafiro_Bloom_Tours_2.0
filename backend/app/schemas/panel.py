@@ -93,3 +93,6 @@ class ReservaHotelOut(BaseModel):
     precio: Decimal
     estado: str
     habitaciones: list[str]
+    
+class RechazarSolicitud(BaseModel):
+    motivo: str | None = None
