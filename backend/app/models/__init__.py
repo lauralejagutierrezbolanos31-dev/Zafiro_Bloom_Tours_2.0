@@ -9,3 +9,4 @@ from app.models.habitacion import Habitacion
 from app.models.usuario import Usuario
 from app.models.tablas import HotelTabla, HabitacionTabla
 from app.models.viaje import Viaje, ViajeHabitacion
+from app.models.solicitud_admin import SolicitudAdmin

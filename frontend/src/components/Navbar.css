@@ -1,0 +1,165 @@
+.cabecera {
+    background: linear-gradient(100deg, #060b67 0%, #0a2a85 50%, #145c93 100%);
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.6rem 2rem;
+}
+
+.navbar-marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-logo {
+    height: 72px;
+    width: auto;
+    object-fit: contain;
+}
+
+.navbar-titulo {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.navbar-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+}
+
+.navbar-boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.navbar-boton:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-boton-ferias {
+    background: var(--beige);
+    color: var(--azul-oscuro);
+    border-color: var(--beige);
+}
+
+.navbar-boton-ferias:hover {
+    background: #e3d9cc;
+}
+
+.navbar-boton-ofertas {
+    background: var(--amarillo);
+    color: var(--azul-oscuro);
+    border-color: var(--amarillo);
+}
+
+.navbar-boton-ofertas:hover {
+    background: #e6a400;
+}
+
+.navbar-boton-parte {
+    background: transparent;
+    border-color: var(--amarillo);
+    color: var(--amarillo);
+}
+
+.navbar-boton-parte:hover {
+    background: var(--amarillo);
+    color: #000;
+}
+
+.navbar-sesion {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.navbar-saludo {
+    font-weight: 600;
+}
+
+.navbar-enlace {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 0.85rem;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.navbar-enlace:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.buscador-contenedor {
+    display: flex;
+    justify-content: center;
+    padding: 0.4rem 2rem 1.2rem;
+}
+
+.buscador {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: 100%;
+    max-width: 700px;
+    padding: 0.5rem 0.6rem 0.5rem 1.2rem;
+    background: white;
+    border-radius: 999px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+}
+
+.buscador input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.95rem;
+    color: var(--texto);
+}
+
+.buscador-boton {
+    margin: 0;
+    border-radius: 999px;
+    background: var(--amarillo);
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar-botones {
+        order: 3;
+        width: 100%;
+    }
+}
+
+a.navbar-enlace {
+    text-decoration: none;
+}

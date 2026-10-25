@@ -1,0 +1,41 @@
+.destino-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.destino-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.destino-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.destino-card-cuerpo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.destino-card-cuerpo h3 {
+    color: var(--azul-medio);
+}
+
+.destino-card-cuerpo p {
+    flex: 1;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: #555;
+}

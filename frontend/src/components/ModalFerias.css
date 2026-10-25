@@ -1,0 +1,140 @@
+.modal-fondo {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5vh 1rem;
+    overflow-y: auto;
+    background: rgba(6, 11, 103, 0.55);
+}
+
+.modal-caja {
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    background: var(--beige);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 1.5rem;
+    background: linear-gradient(100deg, #060b67, #145c93);
+    color: white;
+}
+
+.modal-encabezado h2 {
+    font-size: 1.2rem;
+}
+
+.modal-cerrar {
+    padding: 0.3rem 0.6rem;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.modal-cerrar:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.modal-cuerpo {
+    max-height: 75vh;
+    padding: 1.4rem 1.5rem 2rem;
+    overflow-y: auto;
+}
+
+.modal-subtitulo {
+    margin: 1.2rem 0 0.8rem;
+    color: var(--azul-oscuro);
+}
+
+.modal-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.1rem;
+}
+
+.modal-tarjeta {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-tarjeta img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+}
+
+.modal-tarjeta-click {
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.modal-tarjeta-click:hover {
+    transform: translateY(-3px);
+}
+
+.modal-tarjeta-feria {
+    border-top: 4px solid var(--azul-medio);
+}
+
+.modal-tarjeta-oferta {
+    border-top: 4px solid var(--amarillo);
+}
+
+.modal-tarjeta-cuerpo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1rem;
+}
+
+.modal-tarjeta-cuerpo p {
+    font-size: 0.88rem;
+    color: #444;
+}
+
+.modal-tarjeta-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.modal-tarjeta-cuerpo h3 {
+    color: var(--azul-medio);
+    font-size: 1.02rem;
+}
+
+.etiqueta-descuento {
+    padding: 0.2rem 0.55rem;
+    background: var(--amarillo);
+    border-radius: 999px;
+    color: var(--azul-oscuro);
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.modal-ubicacion {
+    color: var(--azul-medio) !important;
+    font-weight: 600;
+}
+
+.modal-fechas {
+    color: #666 !important;
+    font-size: 0.8rem !important;
+}

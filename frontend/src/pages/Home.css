@@ -1,0 +1,41 @@
+.hero {
+    max-width: 850px;
+    margin: 2.5rem auto;
+    padding: 2rem 2.5rem;
+    background: linear-gradient(135deg, #060b67, #145c93);
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    margin-bottom: 0.7rem;
+    color: var(--amarillo);
+    font-size: 2rem;
+}
+
+.hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.home-deptos {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 2rem;
+}
+
+.home-deptos h2 {
+    margin-bottom: 1.5rem;
+    color: var(--azul-medio);
+    text-align: center;
+}
+
+.home-deptos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
