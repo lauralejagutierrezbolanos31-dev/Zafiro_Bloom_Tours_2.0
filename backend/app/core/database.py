@@ -4,6 +4,13 @@ from sqlalchemy.orm import sessionmaker, DeclarativeBase
 from app.core.config import settings
 
 
+def _con_driver(url: str) -> str:
+    """Fuerza psycopg2, que es el driver que instalamos."""
+    if url.startswith("postgresql://"):
+        return url.replace("postgresql://", "postgresql+psycopg2://", 1)
+    return url
+
+
 def _motivo(e: Exception) -> str:
     # Postgres en Windows a veces responde en español (cp1252) y psycopg2 no puede leerlo
     if isinstance(e, UnicodeDecodeError):
@@ -17,7 +24,11 @@ def _crear_engine():
         local = "localhost" in url or "127.0.0.1" in url
         nombre = "Postgres local" if local else "Neon (nube)"
         try:
-            motor = create_engine(url, pool_pre_ping=True, connect_args={"connect_timeout": 6})
+            motor = create_engine(
+                _con_driver(url),
+                pool_pre_ping=True,
+                connect_args={"connect_timeout": 6},
+            )
             with motor.connect() as conexion:
                 conexion.execute(text("SELECT 1"))
             print(f"[BD] Conectado a: {nombre}")
