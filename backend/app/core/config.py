@@ -3,6 +3,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     DATABASE_URL: str
+    DATABASE_URL_RESPALDO: str = ""
     SECRET_KEY: str
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 720
     FRONTEND_URL: str = "http://localhost:5173"
